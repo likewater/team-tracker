@@ -14,7 +14,20 @@ public class Member {
     mInterests = interests;
     mTeamName = teamName;
     members.add(this);
-    Team newTeam = new Team(this.mTeamName, this);
+    //new code block
+    for (Object individualAttendee: members.get(3))
+      //for (Object eachString: individualAttendee)
+        if (individualAttendee != this.mTeamName) {
+          Team newTeam = new Team(this.mTeamName, this);
+        } //else {
+        //   Team.add(this);
+        // }
+
+
+
+
+    //new code block end
+    //Team newTeam = new Team(this.mTeamName, this);
   }
 
   public String getName() {
