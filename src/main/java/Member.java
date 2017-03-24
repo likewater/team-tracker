@@ -15,11 +15,13 @@ public class Member {
     mTeamName = teamName;
     members.add(this);
     //new code block
-    for (Object individualAttendee: members.get(3))
+    //for (Object individualAttendee: members.get(3))
+      //Field[] fields = individualAttendee.getDeclaredFields();
+      //WHY CAN'T I ITERATE THROUGH THE FIELDS OF AN OBJECT????????
       //for (Object eachString: individualAttendee)
-        if (individualAttendee != this.mTeamName) {
+        //if (individualAttendee != this.mTeamName) {
           Team newTeam = new Team(this.mTeamName, this);
-        } //else {
+        //} //else {
         //   Team.add(this);
         // }
 
