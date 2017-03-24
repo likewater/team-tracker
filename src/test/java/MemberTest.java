@@ -21,6 +21,13 @@ public class MemberTest {
     assertEquals("Languages", myMember.getLanguages());
   }
 
+  @Test
+  public void Task_instantiatesWithInterests_String() {
+    Member myMember = new Member("Name", "Languages", "Interests");
+    assertEquals("Interests", myMember.getInterests());
+  }
+
+
 
 
 }

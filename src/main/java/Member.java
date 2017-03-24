@@ -27,6 +27,10 @@ public class Member {
   public String getLanguages() {
     return mLanguages;
   }
+
+  public String getInterests() {
+    return mInterests;
+  }
   //
   // public boolean isCompleted() {
   //   return mCompleted;
