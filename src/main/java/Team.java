@@ -7,7 +7,7 @@ public class Team {
   private String mMembers;
   //private boolean mCompleted;
   //private LocalDateTime mCreatedAt;
-  //private static ArrayList<Task> instances = new ArrayList<Task>();
+  private static ArrayList<Team> team = new ArrayList<Team>();
   //private int mId;
 
   public Team(String teamName, String focus, String members) {
@@ -16,7 +16,7 @@ public class Team {
     mMembers = members;
     //mCompleted = false;
     //mCreatedAt = LocalDateTime.now();
-    //instances.add(this);
+    team.add(this);
     //mId = instances.size();
   }
 
@@ -40,13 +40,13 @@ public class Team {
   //   return mCreatedAt;
   // }
   //
-  // public static ArrayList<Task> all() {
-  //   return instances;
-  // }
-  //
-  // public static void clear() {
-  //   instances.clear();
-  // }
+  public static ArrayList<Team> all() {
+    return team;
+  }
+
+  public static void clear() {
+    team.clear();
+  }
   //
   // public int getId() {
   //   return mId;

@@ -8,7 +8,7 @@ public class Member {
   private String mTeamName;
   //private boolean mCompleted;
   //private LocalDateTime mCreatedAt;
-  //private static ArrayList<Task> instances = new ArrayList<Task>();
+  private static ArrayList<Member> members = new ArrayList<Member>();
   //private int mId;
 
   public Member(String name, String languages, String interests, String teamName) {
@@ -18,7 +18,7 @@ public class Member {
     mTeamName = teamName;
     //mCompleted = false;
     //mCreatedAt = LocalDateTime.now();
-    //instances.add(this);
+    members.add(this);
     //mId = instances.size();
   }
 
@@ -46,13 +46,13 @@ public class Member {
   //   return mCreatedAt;
   // }
   //
-  // public static ArrayList<Task> all() {
-  //   return instances;
-  // }
-  //
-  // public static void clear() {
-  //   instances.clear();
-  // }
+  public static ArrayList<Member> all() {
+    return members;
+  }
+
+  public static void clear() {
+    members.clear();
+  }
   //
   // public int getId() {
   //   return mId;
