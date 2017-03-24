@@ -6,6 +6,6 @@ public class TeamTest {
   @Test
   public void category_instantiatesCorrectly_true() {
     Team testCategory = new Team("Name", "Focus", "Members");
-    assertEquals(false, testCategory instanceof Team);
+    assertEquals(true, testCategory instanceof Team);
   }
 }

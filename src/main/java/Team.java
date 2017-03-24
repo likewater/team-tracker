@@ -10,7 +10,7 @@ public class Team {
   //private static ArrayList<Task> instances = new ArrayList<Task>();
   //private int mId;
 
-  public Member(String name, String focus, String members) {
+  public Team(String name, String focus, String members) {
     mName = name;
     mFocus = focus;
     mMembers = members;
