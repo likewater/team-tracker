@@ -10,9 +10,9 @@ public class Member {
   //private static ArrayList<Task> instances = new ArrayList<Task>();
   //private int mId;
 
-  public Member(String name, String languages, String interests, ) {
+  public Member(String name, String languages, String interests) {
     mName = name;
-    mLanguages = languges;
+    mLanguages = languages;
     mInterests = interests;
     //mCompleted = false;
     //mCreatedAt = LocalDateTime.now();

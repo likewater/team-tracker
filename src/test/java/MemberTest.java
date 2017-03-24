@@ -5,6 +5,7 @@ public class MemberTest {
 
   @Test
   public void category_instantiatesCorrectly_true() {
-    Category testCategory = new Category("Name", "Languages", "Interests");
-    assertEquals(false, testCategory instanceof Category);
+    Member testCategory = new Member("Name", "Languages", "Interests");
+    assertEquals(true, testCategory instanceof Member);
   }
+}
