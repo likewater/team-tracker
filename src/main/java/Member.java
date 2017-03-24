@@ -5,15 +5,17 @@ public class Member {
   private String mName;
   private String mLanguages;
   private String mInterests;
+  private String mTeamName;
   //private boolean mCompleted;
   //private LocalDateTime mCreatedAt;
   //private static ArrayList<Task> instances = new ArrayList<Task>();
   //private int mId;
 
-  public Member(String name, String languages, String interests) {
+  public Member(String name, String languages, String interests, String teamName) {
     mName = name;
     mLanguages = languages;
     mInterests = interests;
+    mTeamName = teamName;
     //mCompleted = false;
     //mCreatedAt = LocalDateTime.now();
     //instances.add(this);
@@ -30,6 +32,10 @@ public class Member {
 
   public String getInterests() {
     return mInterests;
+  }
+
+  public String getTeamName() {
+    return mTeamName;
   }
   //
   // public boolean isCompleted() {

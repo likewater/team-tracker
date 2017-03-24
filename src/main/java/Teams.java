@@ -19,3 +19,8 @@ public class Teams {
     //instances.add(this);
     //mId = instances.size();
   }
+
+  public String getTeamName() {
+    return mTeamName;
+  }
+}
