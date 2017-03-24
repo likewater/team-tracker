@@ -23,6 +23,10 @@ public class Member {
   public String getName() {
     return mName;
   }
+
+  public String getLanguages() {
+    return mLanguages;
+  }
   //
   // public boolean isCompleted() {
   //   return mCompleted;

@@ -15,5 +15,12 @@ public class MemberTest {
     assertEquals("Name", myMember.getName());
   }
 
+  @Test
+  public void Task_instantiatesWithLanguages_String() {
+    Member myMember = new Member("Name", "Languages", "Interests");
+    assertEquals("Languages", myMember.getLanguages());
+  }
+
+
 
 }
