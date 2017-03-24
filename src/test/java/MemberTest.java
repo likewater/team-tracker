@@ -5,7 +5,15 @@ public class MemberTest {
 
   @Test
   public void category_instantiatesCorrectly_true() {
-    Member testCategory = new Member("Name", "Languages", "Interests");
-    assertEquals(true, testCategory instanceof Member);
+    Member myMember = new Member("Name", "Languages", "Interests");
+    assertEquals(true, myMember instanceof Member);
   }
+
+  @Test
+  public void Task_instantiatesWithName_String() {
+    Member myMember = new Member("Name", "Languages", "Interests");
+    assertEquals("Name", myMember.getName());
+  }
+
+
 }

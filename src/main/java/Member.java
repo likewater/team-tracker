@@ -20,9 +20,9 @@ public class Member {
     //mId = instances.size();
   }
 
-  // public String getDescription() {
-  //   return mDescription;
-  // }
+  public String getName() {
+    return mName;
+  }
   //
   // public boolean isCompleted() {
   //   return mCompleted;
