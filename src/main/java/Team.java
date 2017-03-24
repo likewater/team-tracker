@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.time.LocalDateTime;
 
 public class Team {
-  private String mName;
+  private String mTeamName;
   private String mFocus;
   private String mMembers;
   //private boolean mCompleted;
@@ -10,8 +10,8 @@ public class Team {
   //private static ArrayList<Task> instances = new ArrayList<Task>();
   //private int mId;
 
-  public Team(String name, String focus, String members) {
-    mName = name;
+  public Team(String teamName, String focus, String members) {
+    mTeamName = teamName;
     mFocus = focus;
     mMembers = members;
     //mCompleted = false;
@@ -20,9 +20,9 @@ public class Team {
     //mId = instances.size();
   }
 
-  // public String getDescription() {
-  //   return mDescription;
-  // }
+  public String getTeamName() {
+    return mTeamName;
+  }
   //
   // public boolean isCompleted() {
   //   return mCompleted;
