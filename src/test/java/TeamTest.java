@@ -5,32 +5,30 @@ public class TeamTest {
 
   @Test
   public void category_instantiatesCorrectly_true() {
-    Team testCategory = new Team("TeamName", "Focus", "Members");
+    Member myMember = new Member("Name", "Languages", "Interests", "TeamName");
+    Team testCategory = new Team("TeamName", myMember);
     assertEquals(true, testCategory instanceof Team);
   }
 
   @Test
   public void Team_instantiatesWithTeamName_String() {
-    Team myTeam = new Team("TeamName", "Focus", "Members");
+    Member myMember = new Member("Name", "Languages", "Interests", "TeamName");
+    Team myTeam = new Team("TeamName", myMember);
     assertEquals("TeamName", myTeam.getTeamName());
   }
 
   @Test
-  public void Team_instantiatesWithFocus_String() {
-    Team myTeam = new Team("TeamName", "Focus", "Members");
-    assertEquals("Focus", myTeam.getFocus());
-  }
-
-  @Test
-  public void Team_instantiatesWithMembers_String() {
-    Team myTeam = new Team("TeamName", "Focus", "Members");
-    assertEquals("Members", myTeam.getMembers());
+  public void Team_instantiatesWithMembers_Object() {
+    Member myMember = new Member("Name", "Languages", "Interests", "TeamName");
+    Team myTeam = new Team("TeamName", myMember);
+    assertEquals(myMember, myTeam.getMembers());
   }
 
   @Test
   public void Team_returnsAllInstancesOfTeam_true() {
-    Team firstTeam = new Team("Team-one", "Focus", "Members");
-    Team secondTeam = new Team("Name-two", "Focus", "Members");
+    Member myMember = new Member("Name", "Languages", "Interests", "TeamName");
+    Team firstTeam = new Team("TeamOne", myMember);
+    Team secondTeam = new Team("TeamTwo", myMember);
     assertEquals(true, Team.all().contains(firstTeam));
     assertEquals(true, Team.all().contains(secondTeam));
   }
