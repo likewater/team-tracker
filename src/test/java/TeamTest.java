@@ -14,4 +14,16 @@ public class TeamTest {
     Team myTeam = new Team("TeamName", "Focus", "Members");
     assertEquals("TeamName", myTeam.getTeamName());
   }
+
+  @Test
+  public void Team_instantiatesWithFocus_String() {
+    Team myTeam = new Team("TeamName", "Focus", "Members");
+    assertEquals("Focus", myTeam.getFocus());
+  }
+
+  @Test
+  public void Team_instantiatesWithMembers_String() {
+    Team myTeam = new Team("TeamName", "Focus", "Members");
+    assertEquals("Members", myTeam.getMembers());
+  }
 }

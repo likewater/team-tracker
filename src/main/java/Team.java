@@ -23,6 +23,14 @@ public class Team {
   public String getTeamName() {
     return mTeamName;
   }
+
+  public String getFocus() {
+    return mFocus;
+  }
+
+  public String getMembers() {
+    return mMembers;
+  }
   //
   // public boolean isCompleted() {
   //   return mCompleted;
