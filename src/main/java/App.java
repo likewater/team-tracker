@@ -15,28 +15,6 @@ public class App {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    get("/member-form", (request, response) -> {
-      Map<String, Object> model = new HashMap<String, Object>();
-      model.put("template", "templates/member-form.vtl");
-      return new ModelAndView(model, layout);
-    }, new VelocityTemplateEngine());
-
-    // get("/member-form/:id", (request, response) -> {
-    //   HashMap<String, Object> model = new HashMap<String, Object>();
-    //   Task task = Task.find(Integer.parseInt(request.params(":id")));
-    //   model.put("memberName", memberName );
-    //   model.put("codingLangugaes", codingLanguages );
-    //   model.put("memberInterest", memberInterest );
-    //   model.put("teamName", teamName );
-    //   model.put("template", "templates/task.vtl");
-    //   return new ModelAndView(model, layout);
-    // }, new VelocityTemplateEngine());
-
-    get("/teams", (request, response) -> {
-      Map<String, Object> model = new HashMap<String, Object>();
-      model.put("template", "templates/teams.vtl");
-      return new ModelAndView(model, layout);
-    }, new VelocityTemplateEngine());
 
     //end of file
   }

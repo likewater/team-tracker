@@ -4,29 +4,29 @@ import static org.junit.Assert.*;
 public class TeamTest {
 
   @Test
-  public void category_instantiatesCorrectly_true() {
-    Member myMember = new Member("Name", "Languages", "Interests", "TeamName");
+  public void TeamInstantiatesCorrectly_true() {
+    Member myMember = new Member("Name");
     Team testCategory = new Team("TeamName", myMember);
     assertEquals(true, testCategory instanceof Team);
   }
 
   @Test
-  public void Team_instantiatesWithTeamName_String() {
-    Member myMember = new Member("Name", "Languages", "Interests", "TeamName");
+  public void getTeamName_instantiatesWithTeamName_String() {
+    Member myMember = new Member("Name");
     Team myTeam = new Team("TeamName", myMember);
     assertEquals("TeamName", myTeam.getTeamName());
   }
 
   @Test
-  public void Team_instantiatesWithMembers_Object() {
-    Member myMember = new Member("Name", "Languages", "Interests", "TeamName");
+  public void getMembers_instantiatesWithMembers_Object() {
+    Member myMember = new Member("Name");
     Team myTeam = new Team("TeamName", myMember);
     assertEquals(myMember, myTeam.getMembers());
   }
 
   @Test
-  public void Team_returnsAllInstancesOfTeam_true() {
-    Member myMember = new Member("Name", "Languages", "Interests", "TeamName");
+  public void all_returnsAllInstancesOfTeam_true() {
+    Member myMember = new Member("Name");
     Team firstTeam = new Team("TeamOne", myMember);
     Team secondTeam = new Team("TeamTwo", myMember);
     assertEquals(true, Team.all().contains(firstTeam));
