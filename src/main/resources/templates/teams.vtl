@@ -1,0 +1,22 @@
+<h3>View the teams below!</h3>
+<h3>See who's on your team!</h3>
+
+#if ($teams)
+  <ul>
+    #foreach ($team in $teams)
+      <li><a href="/teams/$team.getId()">$team.getTeamName()</a></li>
+    #end
+  </ul>
+#else
+  <p>No Teams To Show</p>
+#end
+
+<!-- <h1>Team list!</h1>
+#if ($team)
+  <p>Current Team:</p>
+  <p>$team.getTeamName()</p>
+#else
+  <p>No teams!</p>
+#end -->
+
+<p>Create A New Team<a href="teams/new"> Here</a></p>

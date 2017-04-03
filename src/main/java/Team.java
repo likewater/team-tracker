@@ -6,9 +6,9 @@ public class Team {
   private Object mMember;
   private static ArrayList<Team> team = new ArrayList<Team>();
 
-  public Team(String teamName, Object member) {
+  public Team(String teamName) {
     mTeamName = teamName;
-    mMember = member;
+    //mMember = member;
     team.add(this);
   }
 

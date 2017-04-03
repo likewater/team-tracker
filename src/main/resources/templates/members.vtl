@@ -1,15 +1,24 @@
 <!--member.vtl-->
-<h1>Member</h1>
+<h3>View the members below!</h3>
 
-#if ($member)
+#if ($members)
   <ul>
-    #foreach ($task in $tasks)
-      <li><a href="/tasks/$task.getId()">$task.getDescription()</a></li>
+    #foreach ($member in $members)
+      <li><a href="/members/$member.getId()">$member.getName()</a></li>
     #end
   </ul>
 #else
-  <p>No Member Attributes</p>
+  <p>No members To Show</p>
 #end
 
-<a href="/tasks/new">Add New Team Member</a>
+<!-- <h1>Team list!</h1>
+#if ($team)
+  <p>Current Team:</p>
+  <p>$team.getTeamName()</p>
+#else
+  <p>No teams!</p>
+#end -->
+
+<p>Create A New Member<a href="team/:id/members/new"> Here</a></p>
+
 <!--tasks.vtl-->
