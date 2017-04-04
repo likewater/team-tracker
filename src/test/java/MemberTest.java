@@ -23,17 +23,46 @@ public class MemberTest {
     assertTrue(Member.all().contains(secondMember));
   }
 
-  // @Test
-  // public void getId_membersInstantiateWithAnID_1() {
-  //   Member.clear();  // Remember, the test will fail without this line! We need to empty leftover Tasks from previous tests!
-  //   Member myMember = new Member("Mow the lawn");
-  //   assertEquals(1, myMember.getId());
-  // }
-  //
+  @Test
+  public void getId_membersInstantiateWithAnID_1() {
+    Member.clear();
+    Member myMember = new Member("Bob");
+    assertEquals(1, myMember.getId());
+  }
+
   // @Test
   // public void find_returnsMemberWithSameId_secondMember() {
   //   Member firstMember = new Member("Bob");
   //   Member secondMember = new Member("Joy");
+  //   assertEquals(Member.find(secondMember.getId()), secondMember);
+  // }
+
+  // @Test
+  // public void all_returnsAllInstancesOfMember_true() {
+  //   Member firstMember = new Member("Bob");
+  //   Member secondMember = new Member("Jim");
+  //   assertEquals(true, Member.all().contains(firstMember));
+  //   assertEquals(true, Member.all().contains(secondMember));
+  // }
+
+  @Test
+  public void clear_emptiesAllMembersFromArrayList_0() {
+    Member myMember = new Member("Bob");
+    Member.clear();
+    assertEquals(Member.all().size(), 0);
+  }
+
+  @Test
+  public void getId_MembersInstantiateWithAnID_1() {
+    Member.clear();
+    Member myMember = new Member("Jim");
+    assertEquals(1, myMember.getId());
+  }
+
+  // @Test
+  // public void find_returnsMemberWithSameId_secondMember() {
+  //   Member firstMember = new Member("Bob");
+  //   Member secondMember = new Member("Jim");
   //   assertEquals(Member.find(secondMember.getId()), secondMember);
   // }
 
