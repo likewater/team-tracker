@@ -1,4 +1,4 @@
-<!--member.vtl-->
+<!--members.vtl-->
 <h3>View the members below!</h3>
 
 #if ($members)
@@ -11,14 +11,14 @@
   <p>No members To Show</p>
 #end
 
-<!-- <h1>Team list!</h1>
-#if ($team)
+<h1>Member list!</h1>
+#if ($member)
   <p>Current Team:</p>
-  <p>$team.getTeamName()</p>
+  <p>$member.getName()</p>
 #else
-  <p>No teams!</p>
-#end -->
+  <p>No Members</p>
+#end
 
-<p>Create A New Member<a href="team/:id/members/new"> Here</a></p>
+<p>Create A New Member<a href="/members/new"> Here</a></p>
 
-<!--tasks.vtl-->
+<!--members.vtl-->

@@ -43,15 +43,10 @@ public class App {
         teams = new ArrayList<Team>();
         request.session().attribute("teams", teams);
       }
-
-
       String teamName = request.queryParams("teamName");
       Team newTeam = new Team(teamName);
       teams.add(newTeam);
       // request.session().attribute("team", newTeam);
-
-
-
       // String teamName = request.queryParams("teamName");
       // Member myMember = new Member("Name");
       // Object Member = request.queryParams("member");
@@ -60,36 +55,36 @@ public class App {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    get("team/:id/members/new", (request, response) -> {
+
+//members below
+
+
+
+    get("team/:team_id/members/new", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
+      model.put("members", request.session().attribute("members"));
       model.put("template", "templates/team-members-form.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
     get("teams/team_id/members/:members_id", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
+      model.put("members", request.session().attribute("members"));
       model.put("template", "templates/members.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
     post("/members", (request, response) -> {
-
         Map<String, Object> model = new HashMap<String, Object>();
-
         ArrayList<Member> members = request.session().attribute("members");
         if (members == null) {
           members = new ArrayList<Member>();
           request.session().attribute("members", members);
         }
-
-
-        String memberName = request.queryParams("memberName");
-        Member newMember = new Member(memberName);
+        String name = request.queryParams("name");
+        Member newMember = new Member(name);
         members.add(newMember);
         // request.session().attribute("team", newTeam);
-
-
-
         // String teamName = request.queryParams("teamName");
         // Member myMember = new Member("Name");
         // Object Member = request.queryParams("member");
@@ -97,7 +92,6 @@ public class App {
         model.put("template", "templates/team-members-success.vtl");
         return new ModelAndView(model, layout);
       }, new VelocityTemplateEngine());
-
     //   Map<String, Object> model = new HashMap<String, Object>();
     //   String name = request.queryParams("name");
     //   Member newMember = new Member(name);
