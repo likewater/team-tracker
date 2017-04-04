@@ -31,13 +31,6 @@ public class MemberTest {
   }
 
   // @Test
-  // public void find_returnsMemberWithSameId_secondMember() {
-  //   Member firstMember = new Member("Bob");
-  //   Member secondMember = new Member("Joy");
-  //   assertEquals(Member.find(secondMember.getId()), secondMember);
-  // }
-
-  // @Test
   // public void all_returnsAllInstancesOfMember_true() {
   //   Member firstMember = new Member("Bob");
   //   Member secondMember = new Member("Jim");
