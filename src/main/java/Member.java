@@ -29,7 +29,7 @@ public class Member {
   }
 
   public static Member find(int id) {
-  return members.get(id - 1);
+  return members.get(id);
 }
 
 }

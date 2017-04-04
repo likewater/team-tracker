@@ -32,7 +32,7 @@ public class Team {
   }
 
   public static Team find(int id) {
-   return team.get(id - 1);
+   return team.get(id);
  }
 
   public List<Member> getMembers() {
