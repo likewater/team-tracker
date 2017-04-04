@@ -1,6 +1,6 @@
 <!--members.vtl-->
-<h3>View the members below!</h3>
-
+<p>Create A New Member<a href="/"> Here</a></p>
+<h1>Member List!</h1>
 #if ($members)
   <ul>
     #foreach ($member in $members)
@@ -8,17 +8,7 @@
     #end
   </ul>
 #else
-  <p>No members To Show</p>
+  <p>No Members!</p>
 #end
-
-<h1>Member list!</h1>
-#if ($member)
-  <p>Current Team:</p>
-  <p>$member.getName()</p>
-#else
-  <p>No Members</p>
-#end
-
-<p>Create A New Member<a href="/members/new"> Here</a></p>
-
+<a href="/members/new">Add New Member</a>
 <!--members.vtl-->
